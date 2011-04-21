@@ -1,0 +1,10 @@
+*.pyc
+*~
+Thumbs.db
+.DS_Store
+pip-log.txt
+log.txt
+*.pyc
+build/
+*.komodoproject
+
