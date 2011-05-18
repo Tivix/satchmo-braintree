@@ -5,9 +5,9 @@ from payment.views import confirm, payship
     
 
 def pay_ship_info(request):
-    return payship.credit_pay_ship_info(request, config_get_group('PAYMENT_BRAINTREE'))
+    return payship.credit_pay_ship_info(request, config_get_group('PAYMENT_SATCHMO_BRAINTREE'))
 pay_ship_info = never_cache(pay_ship_info)
     
 def confirm_info(request):
-    return confirm.credit_confirm_info(request, config_get_group('PAYMENT_BRAINTREE'))
+    return confirm.credit_confirm_info(request, config_get_group('PAYMENT_SATCHMO_BRAINTREE'))
 confirm_info = never_cache(confirm_info)

@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 gettext = lambda s: s
 _strings = (gettext('CreditCard'), gettext('Credit Card'))
 
-PAYMENT_GROUP = ConfigurationGroup('PAYMENT_BRAINTREE',
+PAYMENT_GROUP = ConfigurationGroup('PAYMENT_SATCHMO_BRAINTREE',
     _('Braintree Payment Settings'),
     ordering=102)
 
@@ -27,7 +27,7 @@ config_register_list(
         'KEY',
         description=_("Module key"),
         hidden=True,
-        default = 'BRAINTREE'),
+        default = 'SATCHMO_BRAINTREE'),
 
     StringValue(PAYMENT_GROUP,
         'LABEL',

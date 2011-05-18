@@ -24,7 +24,7 @@ class PaymentProcessor(BasePaymentProcessor):
     You must have an account with Braintree in order to use this module.
     """
     def __init__(self, settings):
-        super(PaymentProcessor, self).__init__('braintree', settings)
+        super(PaymentProcessor, self).__init__('satchmo_braintree', settings)
     
     def can_authorize(self):
         return False    # disabled for now
@@ -34,7 +34,7 @@ class PaymentProcessor(BasePaymentProcessor):
     
     def capture_payment(self, testing=False, order=None, amount=None):
         """Process payments without an authorization step."""
-        braintree_settings = config_get_group('PAYMENT_BRAINTREE')
+        braintree_settings = config_get_group('PAYMENT_SATCHMO_BRAINTREE')
         
         # Configure Braintree
         Configuration.configure(
@@ -136,7 +136,7 @@ if __name__ == "__main__":
     sampleOrder.credit_card.expirationDate = "10/11"
     sampleOrder.credit_card.ccv = "144"
 
-    authorize_settings = config_get_group('PAYMENT_BRAINTREE')
+    authorize_settings = config_get_group('PAYMENT_SATCHMO_BRAINTREE')
     if authorize_settings.LIVE.value:
         print "Warning.  You are submitting a live order.  AUTHORIZE.NET system is set LIVE."
 
