@@ -23,3 +23,12 @@ Installation
 
 
 This opensource app is brought to you by Tivix, Inc. ( http://tivix.com/ )
+
+
+========
+Versions
+========
+
+0.1 - First merge
+
+0.2 - Configuration group naming fixes + others (in urls.py for example) that use "satchmo_braintree" everywhere rather than just "braintree"
