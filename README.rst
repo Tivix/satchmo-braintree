@@ -1,6 +1,8 @@
-================
+
+
+=================
 satchmo-braintree
-================
+=================
 
 Satchmo is a pretty solid open-source application for building Django powered eCommerce applications. It comes out of the box with support for Authorize.net.
 
